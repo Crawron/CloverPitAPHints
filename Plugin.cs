@@ -75,7 +75,8 @@ public class Plugin : BaseUnityPlugin
 
         try
         {
-            result = session.TryConnectAndLogin("", name, ItemsHandlingFlags.NoItems, null, ["HintGame"]);
+            string[] tags = { "HintGame" };
+            result = session.TryConnectAndLogin("", name, ItemsHandlingFlags.NoItems, null, tags, null, pass);
         }
         catch (Exception e)
         {
